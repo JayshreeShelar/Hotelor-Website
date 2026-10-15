@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rooms | Hotelor</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"><link rel="icon" type="image/png" href="favicon.png"><link rel="shortcut icon" href="favicon.ico"><link rel="apple-touch-icon" href="apple-touch-icon.png"><meta name="theme-color" content="#1fa2c8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script src="js/tailwind-config.js?v=10"></script>
+<link rel="stylesheet" href="css/style.css?v=10">
+</head>
+<body data-page="rooms" class="bg-white overflow-x-hidden">
+<div id="site-header"></div>
+<main>
+<section class="relative min-h-[420px] md:min-h-[520px] md:h-[64vh] md:max-h-[680px] flex items-end pt-36 pb-20 md:pb-24 overflow-hidden bg-deep text-white">
+  <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover opacity-40">
+  <div class="absolute inset-0 bg-gradient-to-b from-ink/70 to-deep/60"></div>
+  <div class="relative max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 w-full reveal"><p class="text-sm text-brand tracking-widest">Home / Rooms</p><h1 class="font-serif text-5xl md:text-7xl font-bold mt-2">Rooms</h1><p class="mt-4 max-w-2xl text-lg text-white/85">Choose your space. Send an enquiry for rates and availability.</p></div>
+  <svg class="absolute bottom-0 w-full h-12 md:h-16 text-white" viewBox="0 0 1440 80" preserveAspectRatio="none"><path fill="currentColor" d="M0 40c240 50 480 50 720 10s480-30 720 10v20H0z"/></svg>
+</section>
+<section class="py-8 md:py-10"><div class="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16"><p class="text-center text-xs tracking-[.3em] uppercase text-brand font-semibold mb-4">Tap a room to explore</p><div class="acc reveal" id="acc">
+<article class="acc-item active" tabindex="0" aria-label="Deluxe Room">
+  <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1200&q=80" alt="Deluxe Room" loading="eager">
+  <div class="acc-shade"></div>
+  <div class="acc-tab"><span class="acc-num">01</span><span class="acc-name">Deluxe Room</span><span class="acc-mini">$299</span></div>
+  <div class="acc-body">
+    <span class="acc-tag">Most booked</span>
+    <h2>Deluxe Room</h2>
+    <p>A bright room with a king bed, work desk and a view you will want to wake up to.</p>
+    <ul class="acc-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7a2 2 0 012-2h14a2 2 0 012 2v7M3 15h18M7 9V6h10v3"/></svg>King bed</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h5M9 4v5"/></svg>32 sqm</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0M12 19h.01"/></svg>Wi-Fi</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h12v4a4 4 0 01-4 4H9a4 4 0 01-4-4v-4zM17 12h2a2 2 0 010 4h-2M8 3v3M12 3v3"/></svg>Breakfast</li></ul>
+    <div class="acc-foot">
+      <div class="acc-price"><small>From</small><strong>$299</strong><small>/ night</small></div>
+      <button type="button" data-enquiry="Deluxe Room" class="acc-btn">Enquire now</button>
+      <a class="acc-wa" target="_blank" rel="noopener" href="https://wa.me/5691247891?text=Hi%20Hotelor%2C%20I%20want%20to%20enquire%20about%20the%20Deluxe%20Room.">WhatsApp</a>
+    </div>
+  </div>
+</article>
+<article class="acc-item" tabindex="0" aria-label="Executive Suite">
+  <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Executive Suite" loading="lazy">
+  <div class="acc-shade"></div>
+  <div class="acc-tab"><span class="acc-num">02</span><span class="acc-name">Executive Suite</span><span class="acc-mini">$449</span></div>
+  <div class="acc-body">
+    <span class="acc-tag">Premium</span>
+    <h2>Executive Suite</h2>
+    <p>A separate lounge and meeting corner, ideal for corporate guests.</p>
+    <ul class="acc-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11V8a3 3 0 013-3h8a3 3 0 013 3v3M3 14a2 2 0 014 0v2h10v-2a2 2 0 014 0v4H3z"/></svg>Lounge</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h5M9 4v5"/></svg>52 sqm</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5 6 .8-4.4 4.1 1.1 6L12 16.5 6.8 19.4l1.1-6L3.5 9.3l6-.8z"/></svg>Lounge access</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 16v-4l2-5h10l2 5v4M3 16h18M7 19v-3M17 19v-3"/></svg>Airport pickup</li></ul>
+    <div class="acc-foot">
+      <div class="acc-price"><small>From</small><strong>$449</strong><small>/ night</small></div>
+      <button type="button" data-enquiry="Executive Suite" class="acc-btn">Enquire now</button>
+      <a class="acc-wa" target="_blank" rel="noopener" href="https://wa.me/5691247891?text=Hi%20Hotelor%2C%20I%20want%20to%20enquire%20about%20the%20Executive%20Suite.">WhatsApp</a>
+    </div>
+  </div>
+</article>
+<article class="acc-item" tabindex="0" aria-label="Family Room">
+  <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80" alt="Family Room" loading="lazy">
+  <div class="acc-shade"></div>
+  <div class="acc-tab"><span class="acc-num">03</span><span class="acc-name">Family Room</span><span class="acc-mini">$379</span></div>
+  <div class="acc-body">
+    <span class="acc-tag">Family pick</span>
+    <h2>Family Room</h2>
+    <p>Two beds and extra space so the whole family can relax together.</p>
+    <ul class="acc-feats"><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-7a2 2 0 012-2h14a2 2 0 012 2v7M3 15h18M7 9V6h10v3"/></svg>2 beds</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h5M9 4v5"/></svg>45 sqm</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a4 4 0 014 4c0 3-4 4-4 7M12 19h.01"/></svg>Play corner</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h12v4a4 4 0 01-4 4H9a4 4 0 01-4-4v-4zM17 12h2a2 2 0 010 4h-2M8 3v3M12 3v3"/></svg>Breakfast</li></ul>
+    <div class="acc-foot">
+      <div class="acc-price"><small>From</small><strong>$379</strong><small>/ night</small></div>
+      <button type="button" data-enquiry="Family Room" class="acc-btn">Enquire now</button>
+      <a class="acc-wa" target="_blank" rel="noopener" href="https://wa.me/5691247891?text=Hi%20Hotelor%2C%20I%20want%20to%20enquire%20about%20the%20Family%20Room.">WhatsApp</a>
+    </div>
+  </div>
+</article>
+</div></div><div class="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 mt-5"><ul class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3 text-sm text-deep font-medium"><li class="flex items-center gap-2 bg-mist/70 rounded-full px-4 py-2.5"><span class="w-5 h-5 text-brand shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12a10 10 0 0114 0M8.5 15.5a5 5 0 017 0M12 19h.01"/></svg></span>Free Wi-Fi</li><li class="flex items-center gap-2 bg-mist/70 rounded-full px-4 py-2.5"><span class="w-5 h-5 text-brand shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4zM4 9h5M9 4v5"/></svg></span>Daily housekeeping</li><li class="flex items-center gap-2 bg-mist/70 rounded-full px-4 py-2.5"><span class="w-5 h-5 text-brand shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.5 5.5 6 .8-4.4 4.1 1.1 6L12 16.5 6.8 19.4l1.1-6L3.5 9.3l6-.8z"/></svg></span>24h front desk</li><li class="flex items-center gap-2 bg-mist/70 rounded-full px-4 py-2.5"><span class="w-5 h-5 text-brand shrink-0"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h12v4a4 4 0 01-4 4H9a4 4 0 01-4-4v-4zM17 12h2a2 2 0 010 4h-2M8 3v3M12 3v3"/></svg></span>Breakfast options</li></ul></div></section>
+<section class="relative py-12 text-white text-center overflow-hidden bg-deep"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30"><div class="relative max-w-2xl mx-auto px-5 reveal"><h2 class="font-serif text-4xl md:text-5xl font-bold">Not sure which room suits you?</h2><p class="mt-4 text-white/80">Tell us your dates and needs. We reply within one working day.</p><button data-enquiry="" class="mt-8 bg-brand hover:bg-white hover:text-ink transition rounded-full px-10 py-3 font-semibold pulse-ring">Send enquiry</button></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="js/components.js?v=10"></script><script src="js/main.js?v=10"></script><script src="js/menu.js?v=10"></script><script src="js/rooms.js?v=10"></script>
+</body></html>

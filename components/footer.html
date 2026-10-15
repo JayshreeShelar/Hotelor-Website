@@ -1,0 +1,35 @@
+<footer class="bg-ink text-white/80">
+  <div class="max-w-[1800px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16 py-16 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div><h3 class="font-serif text-3xl text-white mb-4">HOTELOR</h3>
+      <p class="text-sm leading-relaxed">Luxury stays at honest prices. Comfort, service and calm, built around every guest.</p></div>
+    <div><h4 class="font-serif text-xl text-white mb-4">Explore</h4>
+      <ul class="space-y-2 text-sm"><li><a class="hover:text-brand" href="index.html">Home</a></li><li><a class="hover:text-brand" href="about.html">About us</a></li><li><a class="hover:text-brand" href="rooms.html">Rooms</a></li><li><a class="hover:text-brand" href="gallery.html">Gallery</a></li><li><a class="hover:text-brand" href="services.html">Services</a></li><li><a class="hover:text-brand" href="contact.html">Contact</a></li></ul></div>
+    <div><h4 class="font-serif text-xl text-white mb-4">Contact</h4>
+      <ul class="space-y-2 text-sm"><li>+569-124-7891</li><li>stay@hotelor.com</li><li>12 Palm Avenue, Seaside Road</li></ul></div>
+    <div><h4 class="font-serif text-xl text-white mb-4">Have a question?</h4>
+      <p class="text-sm mb-4">Send us an enquiry and we reply within a day.</p>
+      <button data-enquiry="" class="bg-brand hover:bg-white hover:text-ink transition rounded-full px-6 py-2.5 text-sm font-semibold">Send enquiry</button></div>
+  </div>
+  <div class="border-t border-white/10 text-center text-xs py-5">&copy; 2026 Hotelor. All rights reserved.</div>
+</footer>
+
+<div id="enquiry-modal" class="modal fixed inset-0 z-50 bg-ink/70 backdrop-blur-sm flex items-center justify-center p-4">
+  <div class="box bg-white rounded-3xl shadow-soft w-full max-w-lg p-7 relative">
+    <button data-close class="absolute top-4 right-5 text-2xl text-ink/60 hover:text-ink" aria-label="Close">&times;</button>
+    <h3 class="font-serif text-3xl text-deep mb-1">Send an enquiry</h3>
+    <p class="text-sm text-ink/60 mb-5">Tell us what you need. Our team will contact you.</p>
+    <form data-enquiry-form class="grid gap-3">
+      <input required placeholder="Full name" class="border border-mist bg-mist/50 rounded-xl px-4 py-3 outline-none focus:border-brand">
+      <div class="grid sm:grid-cols-2 gap-3">
+        <input required type="email" placeholder="Email" class="border border-mist bg-mist/50 rounded-xl px-4 py-3 outline-none focus:border-brand">
+        <input required type="tel" placeholder="Phone" class="border border-mist bg-mist/50 rounded-xl px-4 py-3 outline-none focus:border-brand">
+      </div>
+      <select id="enq-room" class="border border-mist bg-mist/50 rounded-xl px-4 py-3 outline-none focus:border-brand">
+        <option value="">General enquiry</option><option>Deluxe Room</option><option>Executive Suite</option><option>Family Room</option>
+      </select>
+      <textarea rows="3" placeholder="Your message" class="border border-mist bg-mist/50 rounded-xl px-4 py-3 outline-none focus:border-brand"></textarea>
+      <button class="bg-brand hover:bg-deep transition text-white rounded-full py-3 font-semibold">Send enquiry</button>
+    </form>
+  </div>
+</div>
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 translate-y-24 opacity-0 transition-all duration-500 z-50 bg-deep text-white px-6 py-3 rounded-full shadow-soft text-sm">Opening WhatsApp...</div>
