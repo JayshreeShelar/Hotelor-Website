@@ -90,3 +90,9 @@ body{font-family:'Jost',sans-serif;color:#10303d}
 .shape-b:hover{transform:translateY(-8px);box-shadow:0 30px 60px -20px rgba(16,48,61,.5)}
 .shape-c{--cut:26px;clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)));transition:transform .5s ease,background-color .4s ease,color .4s ease}
 .shape-c:hover{transform:translateY(-6px);--cut:10px}
+
+#navbar.is-scrolled{background-color:rgba(16,48,61,.97)!important;backdrop-filter:blur(10px);box-shadow:0 10px 30px -12px rgba(16,48,61,.5)}
+#header.is-scrolled{color:#fff!important}
+#header.is-scrolled #navbar,#navbar.is-scrolled{background-color:#10303d!important;opacity:1!important}
+.nav-link.is-active{color:#7fdcf5!important;font-weight:600}
+.nav-link.is-active::after{width:100%!important}

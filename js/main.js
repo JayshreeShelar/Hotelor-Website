@@ -4,7 +4,7 @@ document.addEventListener('components:ready', () => {
   const hdr = document.getElementById('header');
   const bar = document.getElementById('navbar'), top = document.getElementById('topbar');
   const onScroll = () => { const s = window.scrollY > 40;
-    bar.classList.toggle('bg-ink/95', s); bar.classList.toggle('shadow-soft', s); bar.classList.toggle('bg-white/5', !s);
+    bar.classList.toggle('bg-ink/95', s); bar.classList.toggle('shadow-soft', s); bar.classList.toggle('bg-white/5', !s); bar.classList.toggle('is-scrolled', s);
     top.classList.toggle('max-h-0', s); top.classList.toggle('max-h-10', !s); };
   onScroll(); window.addEventListener('scroll', onScroll);
   const modal = document.getElementById('enquiry-modal');
@@ -47,3 +47,34 @@ document.addEventListener('DOMContentLoaded', () => {
   }), { threshold: .15 });
   document.querySelectorAll('.reveal,[data-count]').forEach(el => io.observe(el));
 });
+
+/* Header: solid dark background after scrolling, on every page (independent of other scripts) */
+(function () {
+  var update = function () {
+    var y = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+    var on = y > 40, h = document.getElementById('header'), n = document.getElementById('navbar');
+    if (h) h.classList.toggle('is-scrolled', on);
+    if (n) n.classList.toggle('is-scrolled', on);
+  };
+  ['scroll', 'touchmove', 'resize'].forEach(function (ev) { document.addEventListener(ev, update, true); window.addEventListener(ev, update, true); });
+  document.addEventListener('components:ready', update);
+  setInterval(update, 250);
+  update();
+})();
+
+/* Header: highlight the link of the page you are on (works on every page) */
+(function () {
+  var mark = function () {
+    var page = document.body.getAttribute('data-page');
+    var file = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    document.querySelectorAll('.nav-link').forEach(function (a) {
+      var href = (a.getAttribute('href') || '').toLowerCase();
+      var on = a.getAttribute('data-nav') === page || href === file;
+      a.classList.toggle('is-active', on);
+      if (on) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
+  };
+  document.addEventListener('components:ready', mark);
+  setTimeout(mark, 300);
+  mark();
+})();
