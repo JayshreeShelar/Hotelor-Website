@@ -39,7 +39,7 @@
 
     var cta = el('button', 'margin-top:10px;background:rgba(31,162,200,.92);color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:12px;font-size:15px;font-weight:600;cursor:pointer;font-family:Jost,Arial,sans-serif;box-shadow:0 10px 24px -10px rgba(31,162,200,.9);', 'Enquire now');
     cta.type = 'button'; cta.setAttribute('data-menu-enquire', ''); panel.appendChild(cta);
-    panel.appendChild(el('div', 'margin-top:12px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.75);', '+569-124-7891 &nbsp;&middot;&nbsp; stay@hotelor.com'));
+    panel.appendChild(el('div', 'margin-top:12px;text-align:center;font-size:12.5px;color:rgba(255,255,255,.75);', '+91 88305 32500 &nbsp;&middot;&nbsp; stay@hotelor.com'));
 
     document.body.appendChild(backdrop);
     document.body.appendChild(panel);

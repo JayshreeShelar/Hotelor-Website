@@ -5,7 +5,7 @@ document.addEventListener('components:ready', () => {
   const bar = document.getElementById('navbar'), top = document.getElementById('topbar');
   const onScroll = () => { const s = window.scrollY > 40;
     bar.classList.toggle('bg-ink/95', s); bar.classList.toggle('shadow-soft', s); bar.classList.toggle('bg-white/5', !s); bar.classList.toggle('is-scrolled', s);
-    top.classList.toggle('max-h-0', s); top.classList.toggle('max-h-10', !s); };
+    top.classList.toggle('max-h-0', s); top.classList.toggle('max-h-8', !s); };
   onScroll(); window.addEventListener('scroll', onScroll);
   const modal = document.getElementById('enquiry-modal');
   const room = document.getElementById('enq-room');
@@ -16,7 +16,7 @@ document.addEventListener('components:ready', () => {
   modal.addEventListener('click', e => { if (e.target === modal || e.target.closest('[data-close]')) modal.classList.remove('open'); });
   document.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); });
   const toast = document.getElementById('toast');
-  const WA_NUMBER = '5691247891'; // +569-124-7891 (same number as in the site info)
+  const WA_NUMBER = '918830532500'; // +91 88305 32500 (same number as in the site info)
   document.querySelectorAll('form[data-enquiry-form]').forEach(f => f.addEventListener('submit', e => {
     e.preventDefault();
     const lines = ['*New enquiry - Hotelor*'];
@@ -31,7 +31,8 @@ document.addEventListener('components:ready', () => {
     toast.textContent = 'Opening WhatsApp to send your enquiry...';
     toast.classList.remove('translate-y-24', 'opacity-0');
     setTimeout(() => toast.classList.add('translate-y-24', 'opacity-0'), 3500);
-    window.open(url, '_blank');
+    var w = window.open(url, '_blank');
+    if (!w) window.location.href = url;
   }));
   document.querySelectorAll('img').forEach(i => i.addEventListener('error', () => { i.classList.add('bg-deep'); i.removeAttribute('src'); }));
 });
